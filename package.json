@@ -1,13 +1,12 @@
 {
   "name": "ibt-Object",
-  "description": "ibrokethat Object extensions",
+  "description": "ibrokethat Object",
   "version": "0.0.1",
   "author": "si@ibrokethat.com",
   "contributors": [
     { "name": "Simon Jefford", "email": "si@ibrokethat.com" }
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "1.2.x",
     "sinon": "1.3.x"
