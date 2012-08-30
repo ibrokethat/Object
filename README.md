@@ -2,7 +2,7 @@
 
 Simple Object extensions for ES5
 
-## Instal
+## Install
 
        npm install ibt-Object
 
