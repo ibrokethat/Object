@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git@github.com:ibrokethat/ibt-Object"
   },
-  "main": "index",
+  "main": "ibt-Object",
   "scripts": {
     "prepublish" : "npm prune",
     "test": "mocha -u bdd"
