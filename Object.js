@@ -3,7 +3,7 @@
   @module   adds usefull inheritance methods to Object.prototype
 
 */
-if (typeof Object.prototype.create !== "function") {
+if (typeof Object.prototype.extend !== "function") {
 
   Object.defineProperties(Object.prototype, {
 
@@ -14,39 +14,17 @@ if (typeof Object.prototype.create !== "function") {
       @param    {object} definition
       @return   object
     */
-    create: {
+    extend: {
 
       value: function(definition) {
 
-        var name, object, postCreate;
-
-        // //  if we have a pre create method, run it on the definition now
+        //  if we have a pre create method, run it on the definition now
         if (typeof this.__preCreate__ === "function") {
           this.__preCreate__(definition);
         }
 
-        // //  if we have a post create method, cache it now to run post create
-        if (typeof this.__postCreate__ === "function") {
-          postCreate = this.__postCreate__;
-        }
-
         //  get a new object
-        object = Object.create(typeof this === "function" ? this.prototype: this);
-
-        //  and apply all our new definitions
-        for (name in definition) {
-
-          Object.defineProperty(object, name, {
-            value: definition[name],
-            configurable: true
-          });
-
-        }
-
-        //  if we cached a post create method - call it
-        if(postCreate) {
-          postCreate.call(object);
-        }
+        var object = Object.create(typeof this === "function" ? this.prototype: this, definition || {});
 
         //   mr freeze...
         Object.freeze(object);
@@ -70,16 +48,14 @@ if (typeof Object.prototype.create !== "function") {
 
       value: function() {
 
-        var object;
-
         if (typeof this === "function") {
 
-          object = new this(arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]);
+          var object = new this(arguments[0], arguments[1], arguments[2], arguments[3], arguments[4]);
 
         }
         else {
 
-          object = Object.create(this);
+          var object = Object.create(this);
           if (typeof object.__init__ === 'function') {
             object.__init__.apply(object, arguments);
           }

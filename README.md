@@ -1,17 +1,17 @@
-# ibt-Object
+# Object
 
 Simple Object extensions for ES5
 
 ## Install
 
-       npm install ibt-Object
+npm install Object
 
 
-##  What is ibt-Object?
+##  What is Object?
 
 
 
-##  Using ibt_Object
+##  Using Object
 
 
 ## License

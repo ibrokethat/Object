@@ -1,6 +1,6 @@
 {
-  "name": "ibt-Object",
-  "description": "ibrokethat Object",
+  "name": "Object",
+  "description": "Object inheritance enhamcements",
   "version": "0.0.1",
   "author": "si@ibrokethat.com",
   "contributors": [
@@ -14,9 +14,9 @@
   "keywords": ["ibrokethat", "Object"],
   "repository": {
     "type": "git",
-    "url": "git@github.com:ibrokethat/ibt-Object"
+    "url": "git@github.com:ibrokethat/Object"
   },
-  "main": "ibt-Object",
+  "main": "Object",
   "scripts": {
     "prepublish" : "npm prune",
     "test": "mocha -u bdd"
