@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git@github.com:ibrokethat/Object"
   },
-  "main": "Object",
+  "ibrokethat": {
+    "buildClient": true
+  },
+  "main": "Object.js",
   "scripts": {
     "prepublish" : "npm prune",
     "test": "mocha -u bdd"
